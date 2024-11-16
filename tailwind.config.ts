@@ -11,6 +11,9 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        seasky: "var(--seasky)",
+        coral: "var(--coral)",
+        sand: "var(--sand)",
       },
     },
   },
