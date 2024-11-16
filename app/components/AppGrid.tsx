@@ -32,15 +32,7 @@ export default function AppGrid() {
                 {
                   title: app.title,
                   icon: app.icon,
-                  component: (
-                    <Window
-                      close={() => {
-                        removeAppling(app);
-                      }}
-                      title={app.title}
-                      color="bg-coral"
-                    ></Window>
-                  ),
+                  component: app.component,
                 },
               ]);
             }}

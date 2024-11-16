@@ -18,16 +18,12 @@ const ApplingsData: Array<Appling> = [
   {
     title: "Toolbox",
     icon: "/toolbox.png",
-    component: (
-      <Window close={() => {}} title="Toolbox" color="bg-coral"></Window>
-    ),
+    component: <div>Hello</div>,
   },
   {
     title: "Portfolio",
     icon: "/portfolio.png",
-    component: (
-      <Window close={() => {}} title="Toolbox" color="bg-coral"></Window>
-    ),
+    component: <div>Hello</div>,
   },
 ];
 
