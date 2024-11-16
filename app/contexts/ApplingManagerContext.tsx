@@ -12,7 +12,12 @@ const ApplingsData: Array<Appling> = [
   {
     title: "Toolbox",
     icon: "/toolbox.png",
-    component: <Window title="Toolbox" color="bg-coral"></Window>
+    component: <Window close={() => { }} title="Toolbox" color="bg-coral"></Window>
+  },
+  {
+    title: "Portfolio",
+    icon: "/portfolio.png",
+    component: <Window close={() => { }} title="Toolbox" color="bg-coral"></Window>
   }
 ]
 

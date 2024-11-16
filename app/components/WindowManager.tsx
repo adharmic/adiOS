@@ -1,24 +1,15 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { Draggable } from "gsap/dist/Draggable";
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useRef } from "react";
 import { ApplingManagerContext } from "../contexts/ApplingManagerContext";
-import Window from "./Window";
 
 type WindowManagerProps = {
 };
 
 export default function WindowManager({ }: WindowManagerProps) {
   const windowManagerRef = useRef(null);
-  const { openApplings, setOpenApplings } = useContext(ApplingManagerContext)
-
-  useEffect(() => {
-    setOpenApplings([...openApplings, {
-      title: "Test", icon: "", component: <Window closeCallback={() => {
-        setOpenApplings(openApplings.splice(0, 1));
-      }} title="test" color="bg-coral"></Window>
-    }])
-  }, [])
+  const { openApplings } = useContext(ApplingManagerContext)
 
   if (typeof window !== undefined) {
     gsap.registerPlugin(Draggable);
