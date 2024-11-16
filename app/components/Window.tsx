@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 type WindowProps = {
   title: string;
   color: string;
-  close: Function;
+  close: () => void;
 };
 
 export default function Window({
