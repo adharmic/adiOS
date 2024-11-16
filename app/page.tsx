@@ -8,9 +8,8 @@ import Viewport from "./components/Viewport";
 import { ApplingManagerContextProvider } from "./contexts/ApplingManagerContext";
 
 export default function Home() {
-
   useGSAP(() => {
-    let tl = gsap.timeline();
+    const tl = gsap.timeline();
 
     tl.to(".progress-block", {
       scale: 1,

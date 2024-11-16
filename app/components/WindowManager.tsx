@@ -6,9 +6,7 @@ import { ApplingManagerContext } from "../contexts/ApplingManagerContext";
 import Window from "./Window";
 import { Appling } from "../types/Appling";
 
-type WindowManagerProps = {};
-
-export default function WindowManager({}: WindowManagerProps) {
+export default function WindowManager() {
   const windowManagerRef = useRef(null);
   const { openApplings, setOpenApplings } = useContext(ApplingManagerContext);
 

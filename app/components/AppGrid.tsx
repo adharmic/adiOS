@@ -1,19 +1,11 @@
 import Image from "next/image";
 import { useContext } from "react";
 import { ApplingManagerContext } from "../contexts/ApplingManagerContext";
-import Window from "./Window";
-import { Appling } from "../types/Appling";
 
 export default function AppGrid() {
   const { openApplings, setOpenApplings, possibleApplings } = useContext(
     ApplingManagerContext,
   );
-
-  const removeAppling = (applingToRemove: Appling) => {
-    setOpenApplings((prevApplings) =>
-      prevApplings.filter((appling) => appling.title !== applingToRemove.title),
-    );
-  };
 
   return (
     <div className="absolute l-0 t-0 z-10 w-fit gap-16 flex flex-col mt-16">

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PropsWithChildren, useContext } from "react";
+import { PropsWithChildren } from "react";
 
 type WindowProps = {
   title: string;
@@ -22,7 +22,8 @@ export default function Window({
         }
       >
         <h1 className="text-4xl">{title}</h1>
-        <button className="w-12 rounded-full flex items-center justify-center aspect-square bg-white border-4 border-foreground"
+        <button
+          className="w-12 rounded-full flex items-center justify-center aspect-square bg-white border-4 border-foreground"
           onClick={() => {
             close();
           }}

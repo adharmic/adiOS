@@ -6,7 +6,6 @@ import {
   useState,
 } from "react";
 import { Appling } from "../types/Appling";
-import Window from "../components/Window";
 
 type ApplingManagerContextType = {
   possibleApplings: Array<Appling>;
