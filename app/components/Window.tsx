@@ -4,12 +4,14 @@ import { PropsWithChildren } from "react";
 type WindowProps = {
   title: string;
   color: string;
+  closeCallback: Function;
 };
 
 export default function Window({
   title,
   color,
   children,
+  closeCallback,
 }: PropsWithChildren<WindowProps>) {
   return (
     <div className="windowItem border-4 border-foreground flex flex-col bg-sand rounded-xl w-fit">
@@ -20,7 +22,9 @@ export default function Window({
         }
       >
         <h1 className="text-4xl">{title}</h1>
-        <button className="w-12 rounded-full flex items-center justify-center aspect-square bg-white border-4 border-foreground">
+        <button className="w-12 rounded-full flex items-center justify-center aspect-square bg-white border-4 border-foreground"
+          onClick={() => closeCallback()}
+        >
           <Image src="/close.svg" alt="close" width={40} height={40} />
         </button>
       </div>

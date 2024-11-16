@@ -5,19 +5,9 @@ import gsap from "gsap";
 import Loader from "./components/Loader";
 import MenuBar from "./components/MenuBar";
 import Viewport from "./components/Viewport";
-import { ReactElement, useState } from "react";
-import { App } from "./types/App";
-import Window from "./components/Window";
+import { ApplingManagerContextProvider } from "./contexts/ApplingManagerContext";
 
 export default function Home() {
-  const [openWindows, setOpenWindows] = useState<Array<ReactElement>>([
-    <Window title="test" color="bg-coral"></Window>,
-  ]);
-
-  const apps: Array<App> = [
-    { title: "Toolbox", icon: "/toolbox.png" },
-    { title: "Portfolio", icon: "/portfolio.png" },
-  ];
 
   useGSAP(() => {
     let tl = gsap.timeline();
@@ -44,13 +34,16 @@ export default function Home() {
       display: "flex",
     });
   });
-  console.log(apps);
 
   return (
-    <div className="window p-4 flex flex-col w-full h-full items-center">
-      <Loader />
-      <MenuBar />
-      <Viewport apps={apps} openWindows={openWindows} />
-    </div>
+    <>
+      <ApplingManagerContextProvider>
+        <div className="window p-4 flex flex-col w-full h-full items-center">
+          <Loader />
+          <MenuBar />
+          <Viewport />
+        </div>
+      </ApplingManagerContextProvider>
+    </>
   );
 }
