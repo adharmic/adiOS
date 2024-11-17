@@ -13,7 +13,7 @@ export default function AppGrid() {
         return (
           <div
             key={index}
-            className="appIcon aspect-square flex flex-col items-center justify-center"
+            className="appIcon aspect-square flex flex-col items-center justify-center hover:glass hover:cursor-pointer transition-all"
             onClick={() => {
               if (openApplings.some((appling) => appling.title === app.title)) {
                 // TODO: Should focus (put on top) the open appling.
@@ -30,7 +30,7 @@ export default function AppGrid() {
             }}
           >
             <Image src={app.icon} alt={app.title} width={128} height={128} />
-            <h1 className="flex items-center justify-center border-4 border-foreground text-4xl bg-sand p-2 rounded-xl mt-2">
+            <h1 className="flex items-center justify-center border-foreground text-4xl p-2 rounded-xl mt-2">
               {app.title}
             </h1>
           </div>

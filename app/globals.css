@@ -2,14 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
-
 :root {
   --seasky: #77dbf4;
   --coral: #db662d;
   --sand: #ffe9d7;
   --background: #c0d2e6;
-  --foreground: #061822;
+  --foreground: #fff;
 }
 
 /* @media (prefers-color-scheme: dark) { */
@@ -27,13 +25,11 @@ body {
   overflow: hidden;
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  background-size: 5rem 5rem;
-  background-image: 
-    linear-gradient(to right, var(--foreground) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--foreground) 1px, transparent 1px);
+  background-image: url("/bliss.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   /* animation: scroll 5s linear infinite; */
-  font-family: "Fira Sans", monospace;
+  backdrop-filter: blur(20px);
 }
 @keyframes scroll {
   from {
@@ -42,4 +38,14 @@ body {
   to {
     background-position: 10rem 10rem;
   }
+}
+
+
+.glass {
+  background: rgba(0, 0, 0, .4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, .5);
+  color: white;
 }

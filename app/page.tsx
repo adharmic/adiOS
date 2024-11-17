@@ -6,7 +6,9 @@ import Loader from "./components/Loader";
 import MenuBar from "./components/MenuBar";
 import Viewport from "./components/Viewport";
 import { ApplingManagerContextProvider } from "./contexts/ApplingManagerContext";
+import { Open_Sans } from "next/font/google";
 
+const openSans = Open_Sans({ subsets: ["latin"] });
 export default function Home() {
   useGSAP(() => {
     const tl = gsap.timeline();
@@ -35,14 +37,17 @@ export default function Home() {
   });
 
   return (
-    <>
+    <div
+      style={{ fontFamily: openSans.style.fontFamily }}
+      className="w-full h-full"
+    >
       <ApplingManagerContextProvider>
         <div className="window p-4 flex flex-col w-full h-full items-center">
           <Loader />
-          <MenuBar />
           <Viewport />
+          <MenuBar />
         </div>
       </ApplingManagerContextProvider>
-    </>
+    </div>
   );
 }

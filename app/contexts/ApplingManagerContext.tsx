@@ -17,12 +17,12 @@ const ApplingsData: Array<Appling> = [
   {
     title: "Toolbox",
     icon: "/toolbox.png",
-    component: <div>Hello</div>,
+    component: <div className="text-white">Hello</div>,
   },
   {
     title: "Portfolio",
     icon: "/portfolio.png",
-    component: <div>Hello</div>,
+    component: <div className="text-white">Hello</div>,
   },
 ];
 

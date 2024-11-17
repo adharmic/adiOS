@@ -5,17 +5,20 @@ export default function MenuBar() {
   const { openApplings } = useContext(ApplingManagerContext);
 
   return (
-    <div className="opacity-0 menuBar w-full bg-sand rounded-xl border-4 border-foreground -translate-y-full flex justify-start">
-      <div className="bg-coral w-fit text-4xl p-6 rounded-l-md border-r-4 border-foreground flex items-center justify-center">
+    <div className="glass opacity-0 !bg-[#1621c9]/20 menuBar w-full translate-y-full flex justify-start h-28">
+      <div className="!rounded-r-none w-fit text-3xl glass !bg-[#75b600]/60 p-4 flex items-center justify-center hover:!bg-[#75b600]/90 transition-all hover:!border-white hover:cursor-pointer active:scale-90">
         Start
       </div>
-      <div className="flex items-center ml-auto mr-4 gap-4">
+      <div className="p-4 flex items-center gap-4">
         {openApplings.map((appling, index) => {
           return (
-            <div key={index} className="bg-coral p-2 text-4xl rounded-lg border-4 border-foreground">
+            <div
+              key={index}
+              className="glass p-4 text-2xl !bg-[#1621c9]/40 hover:!bg-[#1621c9]/60 transition-all hover:cursor-pointer"
+            >
               {appling.title}
             </div>
-          )
+          );
         })}
       </div>
     </div>
