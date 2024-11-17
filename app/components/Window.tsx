@@ -23,7 +23,7 @@ export default function Window({
     >
       <div
         className={
-          "p-4 flex glass items-center justify-between gap-16 !bg-[#1621c9]/30 !rounded-b-none"
+          "p-4 flex glass items-center justify-between gap-16 !bg-[#1621c9]/40 !rounded-b-none"
         }
       >
         <h1 className="text-4xl">{title}</h1>
