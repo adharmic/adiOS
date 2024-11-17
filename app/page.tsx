@@ -42,7 +42,7 @@ export default function Home() {
       className="w-full h-full"
     >
       <ApplingManagerContextProvider>
-        <div className="window p-4 flex flex-col w-full h-full items-center">
+        <div className="window p-4 pt-0 flex flex-col w-full h-full items-center">
           <Loader />
           <Viewport />
           <MenuBar />
