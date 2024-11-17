@@ -1,8 +1,16 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ApplingManagerContext } from "../contexts/ApplingManagerContext";
 
 export default function MenuBar() {
   const { openApplings } = useContext(ApplingManagerContext);
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    let timer = setInterval(() => setDate(new Date()), 1000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
 
   return (
     <div className="glass opacity-0 !bg-[#1621c9]/40 menuBar w-full translate-y-full flex justify-start h-28">
@@ -20,6 +28,9 @@ export default function MenuBar() {
             </div>
           );
         })}
+      </div>
+      <div className="ml-auto glass h-full flex items-center justify-center p-4 !rounded-l-none !bg-[#fff]/20">
+        <h1>{date.toLocaleTimeString()}</h1>
       </div>
     </div>
   );

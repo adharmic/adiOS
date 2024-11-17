@@ -7,10 +7,10 @@ export default function Portfolio() {
   console.log(portfolioItems);
 
   return (
-    <>
+    <div className="flex flex-col gap-4">
       {portfolioItems.map((item, index) => {
         return <PortfolioItem key={index} portItem={item} />;
       })}
-    </>
+    </div>
   );
 }

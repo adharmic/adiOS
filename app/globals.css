@@ -20,10 +20,12 @@ body {
   color: var(--foreground);
   background: var(--background);
   background-image: url("/bliss.jpg");
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-size: cover;
   /* animation: scroll 5s linear infinite; */
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(0px);
 }
 @keyframes scroll {
   from {

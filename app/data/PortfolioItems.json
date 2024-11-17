@@ -6,6 +6,13 @@
       "icon": "/malavika.svg",
       "tags": ["React", "TypeScript", "vite"],
       "link": "https://www.malavika.org"
+    },
+    {
+      "title": "Sample Item",
+      "description": "Lorem ipsum",
+      "icon": "/globe.svg",
+      "tags": ["test"],
+      "link": "https://www.google.com"
     }
   ]
 }
