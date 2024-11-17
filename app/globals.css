@@ -3,19 +3,12 @@
 @tailwind utilities;
 
 :root {
-  --seasky: #77dbf4;
-  --coral: #db662d;
-  --sand: #ffe9d7;
+  --cobalt: #1621c9;
+  --valley: #75b600;
+  --lavender: #485fea;
   --background: #c0d2e6;
   --foreground: #fff;
 }
-
-/* @media (prefers-color-scheme: dark) { */
-  /* :root { */
-    /* --background: #0a0a0a; */
-    /* --foreground: #ededed; */
-  /* } */
-/* } */
 
 body {
   width: 100vw;
@@ -57,4 +50,13 @@ body {
   backdrop-filter: blur(50px);
   border: 1px solid rgba(255, 255, 255, .5);
   color: white;
+ }
+
+ a {
+   color: #485fea;
+   /* text-decoration: underline; */
+ }
+
+ a:hover {
+   color: white;
  }

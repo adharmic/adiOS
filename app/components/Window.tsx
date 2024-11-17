@@ -1,5 +1,7 @@
 import { PropsWithChildren, useState } from "react";
 import WindowControlButtons from "./WindowControlButtons";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 type WindowProps = {
   title: string;
@@ -14,10 +16,17 @@ export default function Window({
 }: PropsWithChildren<WindowProps>) {
   const [maximized, setMaximized] = useState(false);
 
+  useGSAP(() => {
+    gsap.to(".applingContainer", {
+      duration: 0.2,
+      scale: 1,
+    });
+  }, []);
+
   return (
     <div
       className={
-        "absolute pointer-events-auto flex flex-col glass " +
+        "applingContainer scale-0 absolute pointer-events-auto flex flex-col glass " +
         (maximized ? "w-full h-full !transform-none" : "w-fit windowItem")
       }
     >

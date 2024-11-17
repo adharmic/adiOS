@@ -6,25 +6,13 @@ import {
   useState,
 } from "react";
 import { Appling } from "../types/Appling";
+import { ApplingsData } from "../data/ApplingData";
 
 type ApplingManagerContextType = {
   possibleApplings: Array<Appling>;
   openApplings: Array<Appling>;
   setOpenApplings: Dispatch<SetStateAction<Array<Appling>>>;
 };
-
-const ApplingsData: Array<Appling> = [
-  {
-    title: "Toolbox",
-    icon: "/toolbox.png",
-    component: <div className="text-white">Hello</div>,
-  },
-  {
-    title: "Portfolio",
-    icon: "/portfolio.png",
-    component: <div className="text-white">Hello</div>,
-  },
-];
 
 export const ApplingManagerContext = createContext<ApplingManagerContextType>({
   openApplings: [],

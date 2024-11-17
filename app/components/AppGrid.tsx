@@ -30,7 +30,7 @@ export default function AppGrid() {
             }}
           >
             <Image src={app.icon} alt={app.title} width={128} height={128} />
-            <h1 className="flex items-center justify-center border-foreground text-4xl p-2 rounded-xl mt-2">
+            <h1 className="flex items-center justify-center text-4xl p-4 glass mt-2">
               {app.title}
             </h1>
           </div>
