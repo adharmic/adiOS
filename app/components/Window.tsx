@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useState } from "react";
+import WindowControlButtons from "./WindowControlButtons";
 
 type WindowProps = {
   title: string;
@@ -13,8 +13,10 @@ export default function Window({
   children,
   close,
 }: PropsWithChildren<WindowProps>) {
+  const [maximized, setMaximized] = useState(false);
+
   return (
-    <div className="windowItem border-4 border-foreground flex flex-col bg-sand rounded-xl w-fit">
+    <div className={"absolute pointer-events-auto border-4 border-foreground flex flex-col bg-sand rounded-xl " + (maximized ? "w-full h-full !transform-none" : "w-fit windowItem")}>
       <div
         className={
           "p-4 flex items-center justify-between rounded-t-lg border-b-4 border-foreground gap-16 " +
@@ -22,14 +24,9 @@ export default function Window({
         }
       >
         <h1 className="text-4xl">{title}</h1>
-        <button
-          className="w-12 rounded-full flex items-center justify-center aspect-square bg-white border-4 border-foreground"
-          onClick={() => {
-            close();
-          }}
-        >
-          <Image src="/close.svg" alt="close" width={40} height={40} />
-        </button>
+        <WindowControlButtons isMaximixed={maximized} close={() => close()} toggleMaximize={() => {
+          setMaximized(!maximized);
+        }} />
       </div>
       <div className="p-4 w-full">{children}</div>
     </div>

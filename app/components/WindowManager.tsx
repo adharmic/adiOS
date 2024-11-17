@@ -30,19 +30,18 @@ export default function WindowManager() {
   return (
     <div
       ref={windowManagerRef}
-      className="z-20 relative l-0 t-0 r-0 b-0 w-full h-full pointer-events-none flex items-center justify-center"
+      className="z-20 relative l-0 t-0 r-0 b-0 w-full h-full pointer-events-none"
     >
       {openApplings.map((window, index) => {
         return (
-          <div className="windowItem pointer-events-auto" key={index}>
-            <Window
-              title={window.title}
-              color="bg-coral"
-              close={() => removeAppling(window)}
-            >
-              {window.component}
-            </Window>
-          </div>
+          <Window
+            key={index}
+            title={window.title}
+            color="bg-coral"
+            close={() => removeAppling(window)}
+          >
+            {window.component}
+          </Window>
         );
       })}
     </div>
