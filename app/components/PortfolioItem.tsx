@@ -6,10 +6,9 @@ type PortfolioItemProps = {
 };
 
 export default function PortfolioItem({ portItem }: PortfolioItemProps) {
-  console.log(portItem);
   return (
     <div>
-      <div className="glass flex text-3xl p-4 gap-4 items-start flex-col sm:flex-row ">
+      <div className="glass flex text-3xl p-4 gap-4 items-start flex-col sm:flex-row sm:items-center">
         <div className="w-full p-4 border border-white rounded-xl aspect-square sm:h-32 sm:w-auto flex items-center justify-center">
           <Image
             src={portItem.icon}

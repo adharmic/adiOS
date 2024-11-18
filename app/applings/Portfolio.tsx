@@ -4,8 +4,6 @@ import portItems from "../data/PortfolioItems.json";
 export default function Portfolio() {
   const portfolioItems = portItems.portfolioItems;
 
-  console.log(portfolioItems);
-
   return (
     <div className="flex flex-col gap-4">
       {portfolioItems.map((item, index) => {
