@@ -8,7 +8,7 @@ export default function AppGrid() {
   );
 
   return (
-    <div className="absolute l-0 t-0 z-10 w-fit gap-8 flex flex-col pb-4 flex-wrap max-h-full">
+    <div className="absolute l-0 t-0 z-10 w-fit gap-8 flex flex-col pb-4 flex-wrap max-h-full max-w-full pr-4">
       {possibleApplings.map((app, index) => {
         return (
           <div
