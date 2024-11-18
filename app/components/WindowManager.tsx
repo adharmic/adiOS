@@ -8,6 +8,7 @@ import { Appling } from "../types/Appling";
 
 export default function WindowManager() {
   const windowManagerRef = useRef(null);
+  const windowRef = useRef(null);
   const { openApplings, setOpenApplings } = useContext(ApplingManagerContext);
 
   gsap.registerPlugin(Draggable);
@@ -21,11 +22,12 @@ export default function WindowManager() {
   useGSAP(
     () => {
       Draggable.create(".windowItem", {
+        trigger: ".windowTitle",
         bounds: windowManagerRef.current,
         allowEventDefault: true,
       });
     },
-    { scope: windowManagerRef, dependencies: [openApplings] },
+    { scope: windowRef, dependencies: [openApplings] },
   );
 
   return (
@@ -35,14 +37,15 @@ export default function WindowManager() {
     >
       {openApplings.map((window, index) => {
         return (
-          <Window
-            key={index}
-            title={window.title}
-            color="bg-coral"
-            close={() => removeAppling(window)}
-          >
-            {window.component}
-          </Window>
+          <div ref={windowRef} key={index}>
+            <Window
+              title={window.title}
+              color="bg-coral"
+              close={() => removeAppling(window)}
+            >
+              {window.component}
+            </Window>
+          </div>
         );
       })}
     </div>
