@@ -1,10 +1,10 @@
 {
   "portfolioItems": [
     {
-      "title": "Malavika Sajith Portfolio",
+      "title": "malavika.org",
       "description": "A professional portfolio website made for my cousin.",
       "icon": "/malavika.svg",
-      "tags": ["React", "TypeScript", "vite"],
+      "tags": ["React", "TypeScript", "Vite"],
       "link": "https://www.malavika.org"
     },
     {

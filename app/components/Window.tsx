@@ -2,6 +2,7 @@ import { PropsWithChildren, useState } from "react";
 import WindowControlButtons from "./WindowControlButtons";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import Image from "next/image";
 
 type WindowProps = {
   title: string;
@@ -26,13 +27,13 @@ export default function Window({
   return (
     <div
       className={
-        "applingContainer scale-0 absolute pointer-events-auto flex flex-col glass max-w-full max-h-full overflow-hidden " +
+        "applingContainer scale-0 absolute pointer-events-auto flex flex-col glass max-w-full max-h-full !border-[--cobalt] !border-4 overflow-hidden " +
         (maximized ? "w-full h-full !transform-none" : "w-fit windowItem")
       }
     >
       <div
         className={
-          "p-4 windowTitle menuBar flex glass items-center justify-between gap-8 !bg-[#1621c9]/40 !border-[rgba(0,0,0,0)] !border-b-white !rounded-b-none"
+          "p-4 windowTitle menuBar !rounded-none flex glass items-center justify-between gap-8 !bg-[#1621c9]/40 !border-[rgba(0,0,0,0)] !border-b-white !rounded-b-none"
         }
       >
         <h1 className="text-4xl">{title}</h1>
