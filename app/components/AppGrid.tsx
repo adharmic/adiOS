@@ -13,7 +13,7 @@ export default function AppGrid() {
         return (
           <div
             key={index}
-            className="hoverGlass appIcon aspect-square flex flex-col w-fit items-center justify-center p-4 lg:h-40 hover:cursor-pointer transition-all active:scale-95 h-32 rounded-2xl border border-[rgba(0,0,0,0)]"
+            className="hoverGlass appIcon aspect-square flex flex-col w-fit items-center justify-center p-4 lg:h-40 lg:max-h-40 hover:cursor-pointer transition-all active:scale-95 h-32 max-h-32 rounded-2xl border border-[rgba(0,0,0,0)]"
             onClick={() => {
               if (openApplings.some((appling) => appling.title === app.title)) {
                 // TODO: Should focus (put on top) the open appling.
