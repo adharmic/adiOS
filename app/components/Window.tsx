@@ -2,7 +2,6 @@ import { PropsWithChildren, useState } from "react";
 import WindowControlButtons from "./WindowControlButtons";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import Image from "next/image";
 
 type WindowProps = {
   title: string;
