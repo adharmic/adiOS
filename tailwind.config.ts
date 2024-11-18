@@ -12,6 +12,7 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         cobalt: "var(--cobalt)",
+        lavender: "var(--lavender)",
       },
     },
   },

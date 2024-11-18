@@ -22,6 +22,7 @@ export default function WindowManager() {
     () => {
       Draggable.create(".windowItem", {
         bounds: windowManagerRef.current,
+        allowEventDefault: true,
       });
     },
     { scope: windowManagerRef, dependencies: [openApplings] },
