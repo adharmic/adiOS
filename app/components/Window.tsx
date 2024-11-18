@@ -26,13 +26,13 @@ export default function Window({
   return (
     <div
       className={
-        "applingContainer scale-0 absolute pointer-events-auto flex flex-col glass " +
+        "applingContainer scale-0 absolute pointer-events-auto flex flex-col glass max-w-full max-h-full overflow-hidden " +
         (maximized ? "w-full h-full !transform-none" : "w-fit windowItem")
       }
     >
       <div
         className={
-          "p-4 flex glass items-center justify-between gap-16 !bg-[#1621c9]/40 !rounded-b-none"
+          "p-4 flex glass items-center justify-between gap-8 !bg-[#1621c9]/40 !rounded-b-none"
         }
       >
         <h1 className="text-4xl">{title}</h1>
@@ -44,7 +44,7 @@ export default function Window({
           }}
         />
       </div>
-      <div className="p-4 w-full">{children}</div>
+      <div className="p-4 w-full max-h-full overflow-scroll">{children}</div>
     </div>
   );
 }

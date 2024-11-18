@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <div
       style={{ fontFamily: openSans.style.fontFamily }}
-      className="w-full h-full"
+      className="w-full h-full overflow-hidden"
     >
       <ApplingManagerContextProvider>
         <div className="window p-4 pt-0 flex flex-col w-full h-full items-center">

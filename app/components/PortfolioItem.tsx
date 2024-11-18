@@ -9,8 +9,8 @@ export default function PortfolioItem({ portItem }: PortfolioItemProps) {
   console.log(portItem);
   return (
     <div>
-      <div className="glass flex text-3xl p-4 gap-4 items-center">
-        <div className="p-4 border border-white rounded-xl w-32 h-32">
+      <div className="glass flex text-3xl p-4 gap-4 items-start flex-col sm:flex-row ">
+        <div className="w-full p-4 border border-white rounded-xl aspect-square sm:h-32 sm:w-auto flex items-center justify-center">
           <Image
             src={portItem.icon}
             width={400}
@@ -18,7 +18,7 @@ export default function PortfolioItem({ portItem }: PortfolioItemProps) {
             alt={portItem.title}
           />
         </div>
-        <div className="flex flex-col gap-2 justify-center">
+        <div className="flex flex-col gap-2">
           {portItem.link !== null ? (
             <a href={portItem.link} target="_blank">
               <h1>{portItem.title}</h1>
