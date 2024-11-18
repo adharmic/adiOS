@@ -50,7 +50,6 @@ body {
 
 .hoverGlass:hover {
   background: rgba(0, 0, 0, .4);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);

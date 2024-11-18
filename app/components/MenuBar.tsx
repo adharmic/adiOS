@@ -13,8 +13,8 @@ export default function MenuBar() {
   }, []);
 
   return (
-    <div className="glass menuBar opacity-0 !bg-cobalt menuBar w-full translate-y-full flex justify-center sm:justify-start h-16 max-h-16">
-      <div className="absolute startButton h-20 w-20 bg-valley rounded-full aspect-square flex items-center justify-center text-2xl border-white border p-4 top-1/2 -translate-y-1/2 sm:relative sm:h-full sm:w-32 sm:rounded-[16px] sm:border-[rgba(0,0,0,0)] sm:border-r-white sm:rounded-r-none hover:cursor-pointer hover:saturate-150 transition-all ">
+    <div className="absolute bottom-0 !rounded-none glass menuBar opacity-0 !bg-cobalt menuBar w-screen translate-y-full flex justify-center sm:justify-start h-16 max-h-16">
+      <div className="absolute startButton h-24 w-24 bg-valley rounded-full aspect-square flex items-center justify-center text-2xl p-4 top-1/2 -translate-y-1/2 sm:relative sm:h-full sm:w-32 sm:rounded-none sm:border-[rgba(0,0,0,0)] sm:border-r-white hover:cursor-pointer hover:saturate-150 transition-all ">
         Start
       </div>
       <div className="pl-2 hidden md:flex items-center gap-2">
@@ -29,7 +29,7 @@ export default function MenuBar() {
           );
         })}
       </div>
-      <div className="ml-auto h-full flex items-center justify-center p-4 rounded-[16px] border-[rgba(255,255,255,0.3)] border-l !rounded-l-none !bg-[#fff]/20 ">
+      <div className="ml-auto w-1/2 h-full flex items-center justify-end p-4 !rounded-none border-[rgba(255,255,255,0.3)] border-l !rounded-l-none !bg-[#fff]/20 sm:w-auto">
         <h1>{date.toDateString()}</h1>
       </div>
     </div>

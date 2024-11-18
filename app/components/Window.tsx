@@ -26,13 +26,13 @@ export default function Window({
   return (
     <div
       className={
-        "applingContainer scale-0 absolute pointer-events-auto flex flex-col glass max-w-full max-h-full !border-[--cobalt] !border-4 overflow-hidden " +
+        "applingContainer !rounded-none !rounded-t-xl scale-0 absolute pointer-events-auto flex flex-col glass max-w-full max-h-full !border-[--cobalt] !border-4 overflow-hidden " +
         (maximized ? "w-full h-full !transform-none" : "w-fit windowItem")
       }
     >
       <div
         className={
-          "p-4 windowTitle menuBar !border-none !rounded-none flex glass items-center justify-between gap-8"
+          "p-4 windowTitle menuBar !border-[rgba(0,0,0,0)] !border-none !rounded-none flex glass items-center justify-between gap-8"
         }
       >
         <h1 className="text-4xl">{title}</h1>

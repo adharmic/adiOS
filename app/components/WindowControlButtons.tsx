@@ -14,7 +14,7 @@ export default function WindowControlButtons({
   return (
     <div className="flex flex gap-4">
       <button
-        className="w-12 glass !rounded-full flex items-center justify-center aspect-square !bg-[#75b600]/80 border-4 border-foreground hover:!bg-[#75b600] transition-all"
+        className="w-12 glass !rounded-full flex items-center justify-center aspect-square !bg-[#75b600]/80 hover:!bg-[#75b600] transition-all"
         onClick={() => {
           toggleMaximize();
         }}
@@ -31,7 +31,7 @@ export default function WindowControlButtons({
         )}
       </button>
       <button
-        className="w-12 glass !rounded-full flex items-center justify-center aspect-square !bg-[#9b1e00]/80 border-4 border-foreground hover:!bg-[#9b1e00] transition-all"
+        className="w-12 glass !rounded-full flex items-center justify-center aspect-square !bg-[#9b1e00]/80 hover:!bg-[#9b1e00] transition-all"
         onClick={() => {
           close();
         }}
