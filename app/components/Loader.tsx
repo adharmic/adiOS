@@ -14,7 +14,7 @@ export default function Loader() {
               return (
                 <div
                   key={index}
-                  className="scale-0 progress-block w-1/12 h-full bg-cobalt rounded"
+                  className="scale-0 progress-block w-1/12 h-full bg-lavender rounded-lg"
                 ></div>
               );
             })}

@@ -18,7 +18,7 @@ export default function PortfolioItem({ portItem }: PortfolioItemProps) {
             alt={portItem.title}
           />
         </div>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 justify-between min-h-32">
           {portItem.link !== null ? (
             <a href={portItem.link} target="_blank">
               <h1>{portItem.title}</h1>
