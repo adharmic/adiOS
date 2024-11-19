@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --cobalt: #1621c9;
+  --cobalt: #245DDA;
   --valley: #75b600;
   --lavender: #485fea;
   --poppy:  #9b1e00;
@@ -40,12 +40,12 @@ body {
 
 
 .glass {
-  background: rgba(0, 0, 0, .4);
+  background: rgba(30, 30, 30, .8);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(50px);
   backdrop-filter: blur(50px);
-  border: 1px solid rgba(255, 255, 255, .5);
+  border: 1px solid rgba(255, 255, 255, 1);
   color: white;
 }
 
@@ -59,11 +59,20 @@ body {
   color: white;
  }
 
- a {
-   color: #485fea;
-   /* text-decoration: underline; */
- }
+a {
+  color: #485fea;
+  /* text-decoration: underline; */
+}
 
- a:hover {
-   color: white;
- }
+a:hover {
+  color: white;
+}
+
+.menuBar {
+   background-image: linear-gradient(to top, #1621c9, #0f34cf, #0f43d3, #1850d7, #245dda);
+}
+
+.startButton {
+  background: #76B600;
+  background: radial-gradient(at center top, #76B600, #16A86D);  
+}

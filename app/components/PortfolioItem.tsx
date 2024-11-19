@@ -33,7 +33,7 @@ export default function PortfolioItem({ portItem }: PortfolioItemProps) {
               return (
                 <div
                   key={index}
-                  className="glass text-base pl-2 pr-2 pt-1 pb-1 !rounded-2xl !bg-[#1621c9]/20 "
+                  className="text-base pl-2 pr-2 pt-1 pb-1 !rounded-2xl bg-cobalt flex items-center justify-center "
                 >
                   {tag}
                 </div>

@@ -32,7 +32,7 @@ export default function AppGrid() {
             <div className="h-16 aspect-square">
               <Image src={app.icon} alt={app.title} width={128} height={128} />
             </div>
-            <h1 className="flex items-center justify-center glass lg:p-4 p-1 pr-2 pl-2 mt-2 text-xl">
+            <h1 className="flex items-center justify-center glass lg:p-2 p-1 pr-2 pl-2 mt-2 text-xl">
               {app.title}
             </h1>
           </div>
