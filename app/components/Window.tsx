@@ -44,7 +44,12 @@ export default function Window({
           }}
         />
       </div>
-      <div className="p-4 w-full max-h-full overflow-scroll border-[#1621c9] border-4 border-t-0">
+      <div
+        className={
+          "p-4 w-full max-h-full overflow-scroll border-[#1621c9] border-4 border-t-0 " +
+          (maximized ? "h-full" : "")
+        }
+      >
         {children}
       </div>
     </div>
