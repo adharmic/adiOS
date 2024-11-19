@@ -1,11 +1,12 @@
 import Portfolio from "../applings/Portfolio";
 import { Appling } from "../types/Appling";
+import Toolbox from "../applings/Toolbox";
 
 export const ApplingsData: Array<Appling> = [
   {
     title: "Toolbox",
     icon: "/toolbox.png",
-    component: <div className="text-white">Hello</div>,
+    component: <Toolbox />,
   },
   {
     title: "Portfolio",

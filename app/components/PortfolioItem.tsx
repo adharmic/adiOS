@@ -8,8 +8,8 @@ type PortfolioItemProps = {
 export default function PortfolioItem({ portItem }: PortfolioItemProps) {
   return (
     <div>
-      <div className="glass flex text-3xl p-4 gap-4 items-start flex-col sm:flex-row sm:items-center !bg-[rgba(0,0,0,0.8)]">
-        <div className="w-full p-4 !border-none !border-[rgba(0,0,0,0)] rounded-xl aspect-square sm:h-32 sm:w-auto !bg-[rgba(0,0,0,.5)] flex items-center justify-center">
+      <div className="glass !rounded-none flex text-3xl p-4 gap-4 items-start flex-col sm:flex-row sm:items-center !bg-[rgba(0,0,0,0.8)]">
+        <div className="w-full p-4 !border-none !rounded-none !border-[rgba(0,0,0,0)] rounded-xl aspect-square sm:h-32 sm:w-auto !bg-[rgba(0,0,0,.5)] flex items-center justify-center">
           <Image
             src={portItem.icon}
             width={400}
@@ -33,7 +33,7 @@ export default function PortfolioItem({ portItem }: PortfolioItemProps) {
               return (
                 <div
                   key={index}
-                  className="text-base pl-2 pr-2 pt-1 pb-1 !rounded-2xl bg-cobalt flex items-center justify-center "
+                  className="text-base pl-2 pr-2 pt-1 pb-1 bg-cobalt flex items-center justify-center "
                 >
                   {tag}
                 </div>

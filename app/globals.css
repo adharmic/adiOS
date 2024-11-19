@@ -74,3 +74,8 @@ a:hover {
   background: #76B600;
   background: radial-gradient(at center top, #76B600, #16A86D);  
 }
+
+.badge {
+  aspect-ratio: 1/cos(30deg);
+  clip-path: polygon(50% -50%,100% 50%,50% 150%,0 50%);
+}

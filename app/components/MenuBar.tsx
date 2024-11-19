@@ -22,7 +22,7 @@ export default function MenuBar() {
           return (
             <div
               key={index}
-              className="flex border-[rgba(255,255,255,0.3)] border rounded items-center justify-center h-12 pl-4 pr-4 text-2xl !bg-lavender hover:!bg-[#1621c9]/60 transition-all hover:cursor-pointer"
+              className="flex border-[rgba(255,255,255,0.3)] border !rounded-none items-center justify-center h-12 pl-4 pr-4 text-2xl !bg-lavender hover:!bg-[#1621c9]/60 transition-all hover:cursor-pointer"
             >
               {appling.title}
             </div>
