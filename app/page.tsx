@@ -7,9 +7,13 @@ import MenuBar from "./components/MenuBar";
 import Viewport from "./components/Viewport";
 import { ApplingManagerContextProvider } from "./contexts/ApplingManagerContext";
 import { Open_Sans } from "next/font/google";
+import StartMenu from "./components/StartMenu";
+import { useState } from "react";
 
 const openSans = Open_Sans({ subsets: ["latin"] });
 export default function Home() {
+  const [isStartHidden, setIsStartHidden] = useState(true);
+
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -45,7 +49,12 @@ export default function Home() {
         <div className="window p-4 pt-0 pb-0 flex flex-col w-full h-full items-center">
           <Loader />
           <Viewport />
-          <MenuBar />
+          <MenuBar
+            toggleStartHidden={() => {
+              setIsStartHidden(!isStartHidden);
+            }}
+          />
+          <StartMenu isHidden={isStartHidden} setIsHidden={setIsStartHidden} />
         </div>
       </ApplingManagerContextProvider>
     </div>
