@@ -33,7 +33,7 @@ export default function PortfolioItem({ portItem }: PortfolioItemProps) {
               return (
                 <div
                   key={index}
-                  className="text-base pl-2 pr-2 pt-1 pb-1 bg-cobalt flex items-center justify-center "
+                  className="menuBar text-base pl-2 pr-2 pt-1 pb-1 bg-cobalt flex items-center justify-center "
                 >
                   {tag}
                 </div>

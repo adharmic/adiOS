@@ -9,6 +9,7 @@
   --poppy:  #9b1e00;
   --background: #c0d2e6;
   --foreground: #fff;
+  --sand: #ffe9d7;
 }
 
 body {
@@ -68,6 +69,10 @@ a:hover {
 
 .menuBar {
    background-image: linear-gradient(to top, #1621c9, #0f34cf, #0f43d3, #1850d7, #245dda);
+}
+
+.menuBarInverted {
+   background-image: linear-gradient(to bottom, #1621c9, #0f34cf, #0f43d3, #1850d7, #245dda);
 }
 
 .startButton {

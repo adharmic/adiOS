@@ -26,11 +26,17 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
       <div
         className={
           "max-h-full max-w-full overflow-hidden absolute w-[600px] h-[700px] left-0 bottom-16 " +
-          (isHidden ? "hidden" : "flex flex-col bg-white")
+          (isHidden
+            ? "hidden"
+            : "flex flex-col menuBarInverted justify-between items-center")
         }
       >
-        <div className="menuBar">Welcome, Guest</div>
-        <div className="menuBar mt-auto">Choose an option</div>
+        <div className="p-6 menuBar w-full self-start">Welcome, Guest</div>
+        <div className="h-full w-full pl-1 pr-1">
+          <div className="bg-sand h-full w-full" />
+          <div className="bg-background h-full w-3/4 border-l-2 border-cobalt" />
+        </div>
+        <div className="menuBar w-full p-6 self-end">Choose an option</div>
       </div>
     </div>
   );

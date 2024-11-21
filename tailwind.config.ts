@@ -14,6 +14,7 @@ export default {
         cobalt: "var(--cobalt)",
         lavender: "var(--lavender)",
         valley: "var(--valley)",
+        sand: "var(--sand)",
       },
     },
   },
