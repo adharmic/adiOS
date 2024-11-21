@@ -20,7 +20,9 @@ export default function MenuBar({ toggleStartHidden }: MenuBarProps) {
     <div className="bottom-0 !rounded-none glass menuBar opacity-0 !bg-cobalt menuBar w-screen translate-y-full flex justify-center sm:justify-start h-16 max-h-16">
       <div
         className="absolute startButton h-24 w-24 bg-valley rounded-t-full aspect-square flex items-start pt-5 drop-shadow-2xl justify-center text-2xl p-4 top-1/2 -translate-y-1/3 sm:relative sm:h-full sm:w-32 sm:rounded-none sm:border-[rgba(0,0,0,0)] sm:border-r-white hover:cursor-pointer hover:saturate-150 transition-all sm:-translate-y-1/2 sm:items-center"
-        onClick={() => toggleStartHidden()}
+        onClick={() => {
+          toggleStartHidden();
+        }}
       >
         Start
       </div>

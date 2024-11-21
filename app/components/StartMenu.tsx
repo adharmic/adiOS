@@ -17,8 +17,8 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
         setIsHidden(true);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("mouseup", handleClickOutside);
+    return () => document.removeEventListener("mouseup", handleClickOutside);
   }, [setIsHidden]);
 
   return (

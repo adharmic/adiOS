@@ -54,7 +54,12 @@ export default function Home() {
               setIsStartHidden(!isStartHidden);
             }}
           />
-          <StartMenu isHidden={isStartHidden} setIsHidden={setIsStartHidden} />
+          <StartMenu
+            isHidden={isStartHidden}
+            setIsHidden={(isHidden: boolean) => {
+              setIsStartHidden(isHidden);
+            }}
+          />
         </div>
       </ApplingManagerContextProvider>
     </div>
