@@ -32,7 +32,7 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
         }
       >
         <div className="p-6 menuBar w-full self-start">Welcome, Guest</div>
-        <div className="h-full w-full pl-1 pr-1">
+        <div className="h-full w-full pl-1 pr-1 flex">
           <div className="bg-sand h-full w-full" />
           <div className="bg-background h-full w-3/4 border-l-2 border-cobalt" />
         </div>
