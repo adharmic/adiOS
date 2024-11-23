@@ -12,7 +12,8 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
     const handleClickOutside = (event: MouseEvent) => {
       if (
         wrapperRef.current &&
-        !wrapperRef.current.contains(event.target as Node)
+        !wrapperRef.current.contains(event.target as Node) &&
+        !document.querySelector(".startButton")?.contains(event.target as Node)
       ) {
         setIsHidden(true);
       }
@@ -36,7 +37,9 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
           <div className="bg-sand h-full w-full" />
           <div className="bg-background h-full w-3/4 border-l-2 border-cobalt" />
         </div>
-        <div className="menuBar w-full p-6 self-end">Choose an option</div>
+        <div className="menuBar w-full p-6 flex items-center justify-end">
+          Choose an option
+        </div>
       </div>
     </div>
   );
