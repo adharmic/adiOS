@@ -24,10 +24,13 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
   }, [setIsHidden]);
 
   return (
-    <div ref={wrapperRef}>
+    <div
+      ref={wrapperRef}
+      className="absolute max-h-full max-w-full w-[600px] h-[700px] p-2 left-0 bottom-16 "
+    >
       <div
         className={
-          "max-h-full max-w-full overflow-hidden absolute w-[600px] h-[700px] left-0 bottom-16 " +
+          "h-full w-full overflow-hidden " +
           (isHidden
             ? "hidden"
             : "flex flex-col menuBarInverted justify-between items-center")
