@@ -5,7 +5,7 @@ import Toolbox from "../applings/Toolbox";
 export const ApplingsData: Array<Appling> = [
   {
     title: "Toolbox",
-    icon: "/toolbox.png",
+    icon: "/toolbox.svg",
     component: <Toolbox />,
   },
   {
