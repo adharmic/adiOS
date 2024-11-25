@@ -50,6 +50,7 @@ export default function Home() {
           <Loader />
           <Viewport />
           <MenuBar
+            isStartHidden={isStartHidden}
             toggleStartHidden={() => {
               setIsStartHidden(!isStartHidden);
             }}
