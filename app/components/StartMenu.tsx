@@ -26,7 +26,7 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
   return (
     <div
       ref={wrapperRef}
-      className="absolute max-h-full max-w-full w-[600px] h-[700px] p-2 left-0 sm:pl-0 pb-[4.5rem] sm:pb-16 bottom-0 pointer-events-none"
+      className="absolute max-h-full max-w-full h-full w-[600px] sm:h-[700px] p-2 left-0 sm:pl-0 pb-[4.5rem] sm:pb-16 bottom-0 pointer-events-none"
     >
       <div
         className={
