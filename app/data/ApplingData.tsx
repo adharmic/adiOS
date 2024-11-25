@@ -15,7 +15,7 @@ export const ApplingsData: Array<Appling> = [
   },
   {
     title: "Biography",
-    icon: "/vercel.svg",
+    icon: "/biography.svg",
     component: <div />,
   },
 ];
