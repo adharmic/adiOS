@@ -10,7 +10,7 @@ export const ApplingsData: Array<Appling> = [
   },
   {
     title: "Portfolio",
-    icon: "/portfolio.png",
+    icon: "/portfolio.svg",
     component: <Portfolio />,
   },
   {
