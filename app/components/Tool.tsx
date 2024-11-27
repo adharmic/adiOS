@@ -6,7 +6,7 @@ interface ToolProps {
   familiarity: number;
 }
 
-export default function Tool({ name, icon, familiarity }: ToolProps) {
+export default function Tool({ name, icon }: ToolProps) {
   return (
     <div className="badge menuBar h-32 flex items-center justify-center">
       <div className="w-full h-full flex items-center justify-center transition-all">
