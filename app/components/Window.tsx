@@ -27,7 +27,7 @@ export default function Window({
     <div
       className={
         "applingContainer !rounded-none scale-0 absolute pointer-events-auto flex flex-col glass max-w-full max-h-full !border-[rgba(0,0,0,0)] !border-none overflow-hidden " +
-        (maximized ? "w-full h-full !transform-none" : "w-fit windowItem")
+        (maximized ? "w-full h-full !transform-none" : "w-[600px] windowItem")
       }
     >
       <div
