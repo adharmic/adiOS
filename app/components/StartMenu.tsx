@@ -43,20 +43,22 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
           <div className="bg-sand h-full w-full" />
           <div className="bg-background h-full w-3/4 border-l-2 border-cobalt" />
         </div>
-        <div className="menuBar w-full p-6 flex items-center justify-end gap-4 text-xl">
+        <div className="menuBar w-full p-4 flex items-center justify-end gap-4 text-xl">
           <a
             href="https://github.com/adharmic/"
             target="_blank"
-            className="bg-foreground rounded-full h-12 w-12 border border-background"
+            className="startMenuButton flex p-2 items-center gap-2 text-white border border-[rgba(0,0,0,0)] transition-all"
           >
-            <Image
-              src="/github.svg"
-              alt="Link to my GitHub profile"
-              height={48}
-              width={48}
-            />
+            <div className="bg-foreground rounded-full h-12 w-12 border border-background">
+              <Image
+                src="/github.svg"
+                alt="Link to my GitHub profile"
+                height={48}
+                width={48}
+              />
+            </div>
+            GitHub{" "}
           </a>
-          GitHub{" "}
         </div>
       </div>
     </div>

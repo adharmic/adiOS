@@ -1,0 +1,94 @@
+{
+ "tools": [
+   {
+     "name": "React",
+     "icon": "/tools/react.svg", 
+     "familiarity": 0.75
+   },
+   {
+     "name": "TypeScript", 
+     "icon": "/tools/typescript.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "C", 
+     "icon": "/tools/c.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "C++", 
+     "icon": "/tools/cpp.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "C#", 
+     "icon": "/tools/csharp.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "CSS", 
+     "icon": "/tools/css.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "Docker", 
+     "icon": "/tools/docker.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "HTML", 
+     "icon": "/tools/html.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "Java", 
+     "icon": "/tools/java.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "JavaScript", 
+     "icon": "/tools/javascript.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "Kubernetes", 
+     "icon": "/tools/kubernetes.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "MariaDB", 
+     "icon": "/tools/maria.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "MongoDB", 
+     "icon": "/tools/mongo.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "Nginx", 
+     "icon": "/tools/nginx.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "Python", 
+     "icon": "/tools/python.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "Rust", 
+     "icon": "/tools/rust.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "Swift", 
+     "icon": "/tools/swift.svg",
+     "familiarity": 0.75
+   },
+   {
+     "name": "Vim", 
+     "icon": "/tools/vim.svg",
+     "familiarity": 0.75
+   }
+ ]
+}
