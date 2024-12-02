@@ -29,8 +29,6 @@ export default function Tool({ name, icon }: ToolProps) {
       ref={badge}
       onMouseEnter={onEnter}
       onMouseLeave={onExit}
-      onMouseDown={onEnter}
-      onMouseUp={onExit}
       className="badge menuBar h-32 flex items-center justify-center cursor-pointer"
     >
       <div className="w-full h-full flex items-center justify-center transition-all">
