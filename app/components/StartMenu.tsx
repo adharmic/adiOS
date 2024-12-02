@@ -61,7 +61,7 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
           <a
             href="https://github.com/adharmic/"
             target="_blank"
-            className="startMenuButton flex p-2 items-center gap-2 text-white border border-[rgba(0,0,0,0)] transition-all"
+            className="startMenuButton w-full flex p-2 items-center gap-2 text-white border border-[rgba(0,0,0,0)] transition-all"
           >
             <div className="bg-foreground rounded-full h-12 w-12 border border-background flex items-center justify-center">
               <Image
@@ -76,7 +76,7 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
           <a
             href="https://instagram.com/a.dhar.mic/"
             target="_blank"
-            className="startMenuButton flex p-2 items-center gap-2 text-white border border-[rgba(0,0,0,0)] transition-all"
+            className="startMenuButton w-full flex p-2 items-center gap-2 text-white border border-[rgba(0,0,0,0)] transition-all"
           >
             <div className="bg-foreground rounded-full h-12 w-12 border border-background flex items-center justify-center">
               <Image
