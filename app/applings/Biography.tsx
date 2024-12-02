@@ -10,8 +10,8 @@ export default function Biography() {
         <Image
           className="max-w-40 border-2 border-cobalt self-center"
           src={"/images/headshot.jpg"}
-          width={3456}
-          height={5184}
+          width={2500}
+          height={2500}
           alt="A professional headshot of Adithya Ajith."
         />
         <p className="self-center w-full text-center">
