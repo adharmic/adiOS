@@ -36,7 +36,7 @@ export default function Tool({ name, icon }: ToolProps) {
           <Image src={icon} height={400} width={400} alt={name} />
         </div>
       </div>
-      <div className="w-full h-full absolute invisible opacity-0" ref={info}>
+      <div className="w-full h-full absolute invisible" ref={info}>
         <div className="rotate-180 relative bg-[rgba(0,0,0,0.8)] w-full h-full text-white text-xl flex items-center justify-center flex-col gap-2">
           <div className="menuBar w-full flex items-center justify-center border border-white p-2 font-bold">
             {name}

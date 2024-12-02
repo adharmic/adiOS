@@ -41,7 +41,7 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
           Hello, Guest!
         </div>
         <div className="h-full w-full pl-1 pr-1 flex flex-col">
-          <div className="bg-sand h-full w-full p-4 text-black flex flex-col items-center justify-evenly max-h-full overflow-y-scroll text-xl">
+          <div className="bg-sand h-full w-full p-4 text-black flex flex-col items-center justify-evenly max-h-full overflow-y-scroll text-lg sm:text-xl">
             <h1 className="self-start font-bold text-2xl">Welcome to AdiOS!</h1>
             <p>
               This website is meant to be an interactive showcase of my web

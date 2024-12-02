@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function Biography() {
   return (
-    <div className="text-black max-w-[600px] h-[600px] flex flex-col">
-      <h1 className="text-3xl font-bold w-full border-b-2 border-cobalt">
+    <div className="text-black max-w-[600px] h-min-[600px] h-max-full flex flex-col overflow-y-scroll">
+      <h1 className="text-3xl font-bold w-full border-b-2 border-cobalt mb-4">
         About Me
       </h1>
-      <div className="flex flex-col text-xl h-full w-full justify-evenly">
+      <div className="flex flex-col text-xl h-full w-full justify-evenly gap-4">
         <Image
           className="max-w-40 border-2 border-cobalt self-center"
           src={"/images/headshot.jpg"}
