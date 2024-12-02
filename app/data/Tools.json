@@ -51,11 +51,6 @@
      "familiarity": 0.75
    },
    {
-     "name": "Kubernetes", 
-     "icon": "/tools/kubernetes.svg",
-     "familiarity": 0.75
-   },
-   {
      "name": "MariaDB", 
      "icon": "/tools/maria.svg",
      "familiarity": 0.75

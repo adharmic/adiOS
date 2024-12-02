@@ -8,11 +8,11 @@
       "link": "https://www.malavika.org"
     },
     {
-      "title": "Sample Item",
-      "description": "Lorem ipsum",
+      "title": "Satyaloka",
+      "description": "My personal blog.",
       "icon": "/globe.svg",
-      "tags": ["test"],
-      "link": "https://www.google.com"
+      "tags": ["AstroJS", "TypeScript"],
+      "link": "https://satyaloka.org"
     }
   ]
 }

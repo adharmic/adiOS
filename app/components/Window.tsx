@@ -2,10 +2,11 @@ import { PropsWithChildren, useState } from "react";
 import WindowControlButtons from "./WindowControlButtons";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { InfoCircle } from "iconoir-react";
 
 type WindowProps = {
   title: string;
-  color: string;
+  subtitle?: string;
   close: () => void;
 };
 
@@ -13,6 +14,7 @@ export default function Window({
   title,
   children,
   close,
+  subtitle,
 }: PropsWithChildren<WindowProps>) {
   const [maximized, setMaximized] = useState(false);
 
@@ -44,13 +46,16 @@ export default function Window({
           }}
         />
       </div>
-      <div
-        className={
-          "p-4 w-full max-h-full overflow-x-hidden overflow-y-scroll border-[#1621c9] border-4 border-t-0 " +
-          (maximized ? "h-full" : "")
-        }
-      >
-        {children}
+      {subtitle && (
+        <div className="text-black border-b-2 border-4 border-t-0 border-cobalt p-2 flex gap-2 text-cobalt bg-background items-center justify-center">
+          <InfoCircle color="var(--cobalt)" />
+          {subtitle}
+        </div>
+      )}
+      <div className="border-[#1621c9] border-4 border-t-0 w-full max-h-full overflow-x-hidden overflow-y-scroll">
+        <div className={"p-4 w-full " + (maximized ? "h-full" : "")}>
+          {children}
+        </div>
       </div>
     </div>
   );

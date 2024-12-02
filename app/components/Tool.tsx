@@ -9,7 +9,7 @@ interface ToolProps {
   familiarity: number;
 }
 
-export default function Tool({ name, icon, familiarity }: ToolProps) {
+export default function Tool({ name, icon }: ToolProps) {
   const { contextSafe } = useGSAP();
   const badge = useRef(null);
   const info = useRef(null);
@@ -39,12 +39,9 @@ export default function Tool({ name, icon, familiarity }: ToolProps) {
         </div>
       </div>
       <div className="w-full h-full absolute invisible opacity-0" ref={info}>
-        <div className="rotate-180 relative bg-black w-full h-full text-white text-xl flex items-center justify-center flex-col gap-2">
-          <div className="menuBar w-full flex items-center justify-center">
+        <div className="rotate-180 relative bg-[rgba(0,0,0,0.8)] w-full h-full text-white text-xl flex items-center justify-center flex-col gap-2">
+          <div className="menuBar w-full flex items-center justify-center border border-white p-2 font-bold">
             {name}
-          </div>
-          <div className="menuBar w-full flex items-center justify-center">
-            {familiarity}
           </div>
         </div>
       </div>

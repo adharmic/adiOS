@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --cobalt: #245DDA;
+  --cobalt: #1621c9;
   --valley: #75b600;
   --lavender: #485fea;
   --poppy:  #9b1e00;
@@ -38,7 +38,6 @@ body {
     background-position: 10rem 10rem;
   }
 }
-
 
 .glass {
   background: #ffe9d7;

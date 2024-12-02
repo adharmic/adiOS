@@ -9,6 +9,8 @@ export const ApplingsData: Array<Appling> = [
     title: "Toolbox",
     icon: "/toolbox.svg",
     component: <Toolbox />,
+    subtitle:
+      "The Toolbox is a list of software I use for my creative processes.",
   },
   {
     title: "Portfolio",

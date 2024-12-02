@@ -40,7 +40,7 @@ export default function WindowManager() {
           <div ref={windowRef} key={index}>
             <Window
               title={window.title}
-              color="bg-coral"
+              subtitle={window.subtitle}
               close={() => removeAppling(window)}
             >
               {window.component}

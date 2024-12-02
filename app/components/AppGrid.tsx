@@ -25,6 +25,7 @@ export default function AppGrid() {
                   title: app.title,
                   icon: app.icon,
                   component: app.component,
+                  subtitle: app.subtitle,
                 },
               ]);
             }}

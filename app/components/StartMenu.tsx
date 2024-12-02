@@ -1,3 +1,4 @@
+import { InfoCircle } from "iconoir-react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
@@ -26,7 +27,7 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
   return (
     <div
       ref={wrapperRef}
-      className="absolute max-h-full max-w-full h-full w-[600px] sm:h-[700px] p-2 left-0 sm:pl-0 pb-[4.5rem] sm:pb-16 bottom-0 pointer-events-none"
+      className="absolute max-h-full max-w-full h-full w-[600px] sm:h-[800px] p-2 left-0 sm:pl-0 pb-[4.5rem] sm:pb-16 bottom-0 pointer-events-none"
     >
       <div
         className={
@@ -40,8 +41,8 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
           Hello, Guest!
         </div>
         <div className="h-full w-full pl-1 pr-1 flex flex-col">
-          <div className="bg-sand h-full w-full p-4 text-black flex flex-col items-center justify-evenly max-h-full overflow-y-scroll">
-            <h1 className="font-bold text-2xl">Welcome to AdiOS!</h1>
+          <div className="bg-sand h-full w-full p-4 text-black flex flex-col items-center justify-evenly max-h-full overflow-y-scroll text-xl">
+            <h1 className="self-start font-bold text-2xl">Welcome to AdiOS!</h1>
             <p>
               This website is meant to be an interactive showcase of my web
               development and design experience.
@@ -56,6 +57,29 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
               opened, and closed.
             </p>
           </div>
+        </div>
+        <div className="h-fit w-full px-1">
+          <div className="p-2 bg-background h-full w-full border-t-2 border-cobalt flex items-center justify-center text-cobalt gap-2">
+            <InfoCircle color="var(--cobalt)" />
+            <p>
+              Curious about adiOS? Read about it{" "}
+              <a
+                className="underline text-cobalt font-bold"
+                href="https://satyaloka.org/articles/creating-a-mock-os-in-typescript"
+                target="_blank"
+              >
+                here
+              </a>{" "}
+              or view the source code{" "}
+              <a
+                href="https://github.com/adharmic/adiOS"
+                className="underline text-cobalt font-bold"
+                target="_blank"
+              >
+                here.
+              </a>
+            </p>
+          </div>{" "}
         </div>
         <div className="menuBar w-full p-4 flex items-center justify-evenly gap-4 text-xl">
           <a
