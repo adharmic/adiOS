@@ -28,11 +28,14 @@ export default function WindowManager() {
       ref={windowManagerRef}
       className="z-20 relative l-0 t-0 r-0 b-0 w-full h-full pointer-events-none"
     >
-      {openApplings.map((window, index) => {
-        return (
-          window.isOpen && (
+      {openApplings.length <= 0 ? (
+        <div ref={windowRef}></div>
+      ) : (
+        openApplings.map((window, index) => {
+          return (
             <div ref={windowRef} key={index}>
               <Window
+                isOpen={window.isOpen}
                 title={window.title}
                 subtitle={window.subtitle}
                 close={() => closeAppling(window)}
@@ -40,9 +43,9 @@ export default function WindowManager() {
                 {window.component}
               </Window>
             </div>
-          )
-        );
-      })}
+          );
+        })
+      )}
     </div>
   );
 }
