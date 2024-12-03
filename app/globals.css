@@ -80,8 +80,11 @@ a:hover {
 }
 
 .startButton {
-  background: #76B600;
   background: radial-gradient(at center top, #76B600, #16A86D);  
+}
+
+.startButtonActive {
+  background: radial-gradient(at center top, #eb6849, var(--poppy));  
 }
 
 .badge {
