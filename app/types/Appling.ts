@@ -5,4 +5,5 @@ export type Appling = {
   icon: string;
   component: ReactElement;
   subtitle?: string;
+  isOpen?: boolean;
 };

@@ -2,8 +2,6 @@ import Image from "next/image";
 
 type WindowControlButtonsProps = {
   close: () => void;
-  toggleMaximize: () => void;
-  isMaximixed: boolean;
 };
 
 export default function WindowControlButtons({

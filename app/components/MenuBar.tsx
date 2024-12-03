@@ -35,14 +35,15 @@ export default function MenuBar({
       </div>
       <div className="pl-2 hidden md:flex items-center gap-2">
         {openApplings.map((appling, index) => {
-          return (
-            <div
-              key={index}
-              className="flex border-[rgba(255,255,255,0.3)] border !rounded-none items-center justify-center h-12 pl-4 pr-4 text-2xl !bg-lavender hover:!bg-[#1621c9]/60 transition-all hover:cursor-pointer"
-            >
-              {appling.title}
-            </div>
-          );
+          if (appling.isOpen)
+            return (
+              <div
+                key={index}
+                className="flex border-[rgba(255,255,255,0.3)] border !rounded-none items-center justify-center h-12 pl-4 pr-4 text-2xl !bg-lavender hover:!bg-[#1621c9]/60 transition-all hover:cursor-pointer"
+              >
+                {appling.title}
+              </div>
+            );
         })}
       </div>
       <div className="ml-auto w-1/2 h-full flex items-center justify-end p-4 !rounded-none border-[rgba(255,255,255,0.3)] border-l !rounded-l-none !bg-[#fff]/20 sm:w-auto">

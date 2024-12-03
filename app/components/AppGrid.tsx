@@ -3,9 +3,7 @@ import { useContext } from "react";
 import { ApplingManagerContext } from "../contexts/ApplingManagerContext";
 
 export default function AppGrid() {
-  const { openApplings, setOpenApplings, possibleApplings } = useContext(
-    ApplingManagerContext,
-  );
+  const { possibleApplings, openAppling } = useContext(ApplingManagerContext);
 
   return (
     <div className="absolute l-0 t-0 z-10 w-fit gap-8 flex flex-col pb-4 flex-wrap max-h-full max-w-full pr-4">
@@ -15,19 +13,7 @@ export default function AppGrid() {
             key={index}
             className="hoverGlass appIcon aspect-square flex flex-col w-fit items-center justify-center p-4 lg:h-40 lg:max-h-40 hover:cursor-pointer transition-all active:scale-95 h-40 max-h-40 border border-[rgba(0,0,0,0)]"
             onClick={() => {
-              if (openApplings.some((appling) => appling.title === app.title)) {
-                // TODO: Should focus (put on top) the open appling.
-                return;
-              }
-              setOpenApplings([
-                ...openApplings,
-                {
-                  title: app.title,
-                  icon: app.icon,
-                  component: app.component,
-                  subtitle: app.subtitle,
-                },
-              ]);
+              openAppling(app);
             }}
           >
             <div className="h-20 aspect-square">

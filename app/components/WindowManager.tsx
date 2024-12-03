@@ -4,20 +4,13 @@ import { Draggable } from "gsap/dist/Draggable";
 import { useContext, useRef } from "react";
 import { ApplingManagerContext } from "../contexts/ApplingManagerContext";
 import Window from "./Window";
-import { Appling } from "../types/Appling";
 
 export default function WindowManager() {
   const windowManagerRef = useRef(null);
   const windowRef = useRef(null);
-  const { openApplings, setOpenApplings } = useContext(ApplingManagerContext);
+  const { openApplings, closeAppling } = useContext(ApplingManagerContext);
 
   gsap.registerPlugin(Draggable);
-
-  const removeAppling = (applingToRemove: Appling) => {
-    setOpenApplings((prevApplings) =>
-      prevApplings.filter((appling) => appling.title !== applingToRemove.title),
-    );
-  };
 
   useGSAP(
     () => {
@@ -37,15 +30,17 @@ export default function WindowManager() {
     >
       {openApplings.map((window, index) => {
         return (
-          <div ref={windowRef} key={index}>
-            <Window
-              title={window.title}
-              subtitle={window.subtitle}
-              close={() => removeAppling(window)}
-            >
-              {window.component}
-            </Window>
-          </div>
+          window.isOpen && (
+            <div ref={windowRef} key={index}>
+              <Window
+                title={window.title}
+                subtitle={window.subtitle}
+                close={() => closeAppling(window)}
+              >
+                {window.component}
+              </Window>
+            </div>
+          )
         );
       })}
     </div>
