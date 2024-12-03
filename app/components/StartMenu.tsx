@@ -1,6 +1,8 @@
+import { useGSAP } from "@gsap/react";
 import { InfoCircle } from "iconoir-react";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 type StartMenuProps = {
   isHidden: boolean;
@@ -9,6 +11,36 @@ type StartMenuProps = {
 
 export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
+  const offset = "-1000px";
+
+  useGSAP(
+    () => {
+      if (isHidden) {
+        gsap.fromTo(
+          wrapperRef.current,
+          {
+            translateX: 0,
+          },
+          {
+            duration: 0.25,
+            translateX: offset,
+          },
+        );
+      } else {
+        gsap.fromTo(
+          wrapperRef.current,
+          {
+            translateX: offset,
+          },
+          {
+            duration: 0.25,
+            translateX: 0,
+          },
+        );
+      }
+    },
+    { dependencies: [isHidden] },
+  );
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -31,10 +63,7 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
     >
       <div
         className={
-          "h-full w-full pointer-events-auto overflow-hidden " +
-          (isHidden
-            ? "hidden"
-            : "flex flex-col menuBarInverted justify-between items-center")
+          "h-full w-full pointer-events-auto overflow-hidden flex flex-col menuBarInverted justify-between items-center "
         }
       >
         <div className="p-6 menuBar w-full self-start text-3xl">

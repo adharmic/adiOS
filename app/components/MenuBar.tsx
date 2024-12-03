@@ -1,5 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { ApplingManagerContext } from "../contexts/ApplingManagerContext";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 type MenuBarProps = {
   isStartHidden: boolean;
@@ -13,6 +15,35 @@ export default function MenuBar({
   const { openApplings } = useContext(ApplingManagerContext);
   const [date, setDate] = useState(new Date());
 
+  useGSAP(
+    () => {
+      if (!isStartHidden) {
+        gsap.fromTo(
+          ".startButton",
+          {
+            backgroundColor: "var(--valley)",
+          },
+          {
+            duration: 0.25,
+            backgroundColor: "var(--poppy)",
+          },
+        );
+      } else {
+        gsap.fromTo(
+          ".startButton",
+          {
+            backgroundColor: "var(--poppy)",
+          },
+          {
+            duration: 0.25,
+            backgroundColor: "var(--valley)",
+          },
+        );
+      }
+    },
+    { dependencies: [isStartHidden] },
+  );
+
   useEffect(() => {
     const timer = setInterval(() => setDate(new Date()), 1000);
     return () => {
@@ -20,14 +51,11 @@ export default function MenuBar({
     };
   }, []);
 
-  useEffect(() => {}, [isStartHidden]);
-
   return (
     <div className="bottom-0 !rounded-none glass menuBar opacity-0 !bg-cobalt menuBar w-screen translate-y-full flex justify-center sm:justify-start h-16 max-h-16">
       <div
         className={
-          "absolute startButton h-24 w-24 rounded-t-full aspect-square flex items-start pt-5 drop-shadow-2xl justify-center text-2xl p-4 top-1/2 -translate-y-1/3 sm:relative sm:h-full sm:w-32 sm:rounded-none sm:border-[rgba(0,0,0,0)] sm:border-r-white hover:cursor-pointer hover:saturate-150 transition-all sm:-translate-y-1/2 sm:items-center " +
-          (isStartHidden ? "" : "startButtonActive")
+          "absolute h-24 w-24 startButton rounded-t-full aspect-square flex items-start pt-5 drop-shadow-2xl justify-center text-2xl p-4 top-1/2 -translate-y-1/3 sm:relative sm:h-full sm:w-32 sm:rounded-none sm:border-[rgba(0,0,0,0)] sm:border-r-white hover:cursor-pointer hover:saturate-150 transition-all sm:-translate-y-1/2 sm:items-center "
         }
         onClick={() => {
           setStartHidden(!isStartHidden);
