@@ -52,7 +52,7 @@ export default function Window({
           {subtitle}
         </div>
       )}
-      <div className="border-[#1621c9] border-4 border-t-0 w-full max-h-full overflow-x-hidden overflow-y-scroll">
+      <div className="border-[#1621c9] border-4 border-t-0 w-full max-h-full overflow-x-hidden overflow-y-scroll scroller transition-all">
         <div className={"p-4 w-full " + (maximized ? "h-full" : "")}>
           {children}
         </div>

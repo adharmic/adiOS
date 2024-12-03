@@ -29,6 +29,7 @@ body {
   background-size: cover;
   /* animation: scroll 5s linear infinite; */
   backdrop-filter: blur(0px);
+  scrollbar-color: black;
 }
 @keyframes scroll {
   from {
@@ -64,6 +65,10 @@ a {
 
 a:hover {
   color: white;
+}
+
+.scroller {
+  scrollbar-color: var(--cobalt) var(--sand);
 }
 
 .menuBar {
