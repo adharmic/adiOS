@@ -7,7 +7,6 @@ import {
 } from "react";
 import { Appling } from "../types/Appling";
 import { ApplingsData } from "../data/ApplingData";
-import { title } from "node:process";
 
 type ApplingManagerContextType = {
   possibleApplings: Array<Appling>;

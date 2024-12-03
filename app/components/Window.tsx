@@ -1,4 +1,4 @@
-import { PropsWithChildren, useRef, useState } from "react";
+import { PropsWithChildren, useRef } from "react";
 import WindowControlButtons from "./WindowControlButtons";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -19,7 +19,6 @@ export default function Window({
   isOpen,
 }: PropsWithChildren<WindowProps>) {
   const applingRef = useRef(null);
-  const [isWindowOpen, setIsWindowOpen] = useState(true);
 
   useGSAP(
     () => {
