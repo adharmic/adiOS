@@ -2,6 +2,7 @@ import Portfolio from "../applings/Portfolio";
 import { Appling } from "../types/Appling";
 import Toolbox from "../applings/Toolbox";
 import Biography from "../applings/Biography";
+import Contact from "../applings/Contact";
 // import Contact from "../applings/Contact";
 
 export const ApplingsData: Array<Appling> = [
@@ -22,9 +23,9 @@ export const ApplingsData: Array<Appling> = [
     icon: "/biography.svg",
     component: <Biography />,
   },
-  // {
-  //   title: "Contact",
-  //   icon: "/test.png",
-  //   component: <Contact />,
-  // },
+  {
+    title: "Contact",
+    icon: "/images/icons/Contact.png",
+    component: <Contact />,
+  },
 ];
