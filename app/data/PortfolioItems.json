@@ -10,7 +10,7 @@
     {
       "title": "Satyaloka",
       "description": "My personal blog.",
-      "icon": "/globe.svg",
+      "icon": "/images/icons/satyaloka.svg",
       "tags": ["AstroJS", "TypeScript"],
       "link": "https://satyaloka.org"
     }
