@@ -76,8 +76,8 @@ export default function MenuBar({
             );
         })}
       </div>
-      <div className="ml-auto w-1/2 h-full flex items-center justify-end p-4 !rounded-none border-[rgba(255,255,255,0.3)] border-l !rounded-l-none !bg-[#fff]/20 sm:w-auto">
-        <h1>{date.toDateString()}</h1>
+      <div className="ml-auto w-1/2 h-full flex items-center justify-end p-4 !rounded-none border-[rgba(255,255,255,0.3)] border-l !rounded-l-none !bg-[#fff]/20 sm:w-auto font-bold">
+        <h1>{`${date.getMonth()}/${date.getDate()}/${date.getFullYear()}`}</h1>
       </div>
     </div>
   );
