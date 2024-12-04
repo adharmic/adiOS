@@ -8,7 +8,9 @@ import Window from "./Window";
 export default function WindowManager() {
   const windowManagerRef = useRef(null);
   const windowRef = useRef(null);
-  const { openApplings, closeAppling } = useContext(ApplingManagerContext);
+  const { openApplings, closeAppling, focusedAppling } = useContext(
+    ApplingManagerContext,
+  );
 
   gsap.registerPlugin(Draggable);
 
@@ -35,6 +37,7 @@ export default function WindowManager() {
           return (
             <div ref={windowRef} key={index}>
               <Window
+                isFocused={index == focusedAppling}
                 isOpen={window.isOpen}
                 title={window.title}
                 subtitle={window.subtitle}

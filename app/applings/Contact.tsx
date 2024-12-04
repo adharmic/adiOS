@@ -10,7 +10,7 @@ export default function Contact() {
         <input className="border border-cobalt p-2"></input>
       </div>
       <div className="flex flex-col">
-        <label className="font-bold text-xl">Subject</label>
+        <label className="font-bold text-xl">Message</label>
         <textarea className="border border-cobalt p-2"></textarea>
       </div>
       <button className="menuBar p-2 w-fit text-white font-bold">

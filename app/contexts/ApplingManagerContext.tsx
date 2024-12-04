@@ -14,6 +14,8 @@ type ApplingManagerContextType = {
   setOpenApplings: Dispatch<SetStateAction<Array<Appling>>>;
   openAppling: (appling: Appling) => void;
   closeAppling: (appling: Appling) => void;
+  focusedAppling: number;
+  setFocusedAppling: (index: number) => void;
 };
 
 export const ApplingManagerContext = createContext<ApplingManagerContextType>({
@@ -22,6 +24,8 @@ export const ApplingManagerContext = createContext<ApplingManagerContextType>({
   possibleApplings: ApplingsData,
   openAppling: () => null,
   closeAppling: () => null,
+  focusedAppling: -1,
+  setFocusedAppling: () => null,
 });
 
 type ApplingManagerContextProviderProps = {
@@ -33,6 +37,7 @@ export function ApplingManagerContextProvider({
   initial = [],
 }: PropsWithChildren<ApplingManagerContextProviderProps>) {
   const [openApplings, setOpenApplings] = useState<Array<Appling>>(initial);
+  const [focusedAppling, setFocusedAppling] = useState(-1);
 
   const closeAppling = (appling: Appling) => {
     appling.isOpen = false;
@@ -47,6 +52,7 @@ export function ApplingManagerContextProvider({
     appling.isOpen = true;
     const foundApplingIndex = openApplings.indexOf(appling);
     if (foundApplingIndex !== -1) {
+      setFocusedAppling(foundApplingIndex);
       setOpenApplings(
         openApplings.map((openAppling) => {
           return openAppling.title === appling.title ? appling : openAppling;
@@ -65,6 +71,8 @@ export function ApplingManagerContextProvider({
         possibleApplings: ApplingsData,
         openAppling: openAppling,
         closeAppling: closeAppling,
+        focusedAppling: focusedAppling,
+        setFocusedAppling: setFocusedAppling,
       }}
     >
       {children}

@@ -9,6 +9,7 @@ type WindowProps = {
   subtitle?: string;
   close: () => void;
   isOpen?: boolean;
+  isFocused?: boolean;
 };
 
 export default function Window({
@@ -17,6 +18,7 @@ export default function Window({
   close,
   subtitle,
   isOpen,
+  isFocused,
 }: PropsWithChildren<WindowProps>) {
   const applingRef = useRef(null);
 
@@ -70,12 +72,14 @@ export default function Window({
       ref={applingRef}
       className={
         "applingContainer !rounded-none absolute pointer-events-auto flex flex-col glass max-w-full max-h-full !border-[rgba(0,0,0,0)] !border-none overflow-hidden w-[600px] windowItem " +
-        (isOpen ? "visible" : "invisible")
+        (isOpen ? "visible" : "invisible") +
+        " " +
+        (isFocused ? "!z-30" : "!z-20")
       }
     >
       <div
         className={
-          "p-4 windowTitle z-30 menuBar !border-[rgba(0,0,0,0)] !border-none !rounded-none flex glass items-center justify-between gap-8"
+          "p-4 windowTitle z-40 menuBar !border-[rgba(0,0,0,0)] !border-none !rounded-none flex glass items-center justify-between gap-8"
         }
       >
         <h1 className="text-4xl">{title}</h1>

@@ -12,7 +12,7 @@ export default function MenuBar({
   isStartHidden,
   setStartHidden,
 }: MenuBarProps) {
-  const { openApplings } = useContext(ApplingManagerContext);
+  const { openApplings, openAppling } = useContext(ApplingManagerContext);
   const [date, setDate] = useState(new Date());
 
   useGSAP(
@@ -68,6 +68,7 @@ export default function MenuBar({
           if (appling.isOpen)
             return (
               <div
+                onClick={() => openAppling(appling)}
                 key={index}
                 className="flex border-[rgba(255,255,255,0.3)] border !rounded-none items-center justify-center h-12 pl-4 pr-4 text-2xl !bg-lavender hover:!bg-[#1621c9]/60 transition-all hover:cursor-pointer"
               >
