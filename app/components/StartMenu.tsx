@@ -98,7 +98,7 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
               Curious about adiOS? Read about it{" "}
               <a
                 className="underline text-cobalt font-bold"
-                href="https://satyaloka.org/articles/creating-a-mock-os-in-typescript"
+                href="https://satyaloka.org/articles/creating-a-mock-os-with-javascript"
                 target="_blank"
               >
                 here
