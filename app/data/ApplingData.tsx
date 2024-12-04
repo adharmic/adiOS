@@ -8,7 +8,7 @@ import Contact from "../applings/Contact";
 export const ApplingsData: Array<Appling> = [
   {
     title: "Toolbox",
-    icon: "/images/icons/Toolbox.png",
+    icon: "/toolbox.svg",
     component: <Toolbox />,
     subtitle:
       "The Toolbox is a list of software I use for my creative processes.",

@@ -1,7 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { InfoCircle } from "iconoir-react";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 type StartMenuProps = {
@@ -12,6 +12,7 @@ type StartMenuProps = {
 export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const offset = "-1000px";
+  const [initialPosition, setInitialPosition] = useState("-1000px");
 
   useGSAP(
     () => {
@@ -19,13 +20,16 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
         gsap.fromTo(
           wrapperRef.current,
           {
-            translateX: 0,
+            translateX: initialPosition,
           },
           {
             duration: 0.25,
             translateX: offset,
           },
         );
+        if (initialPosition == offset) {
+          setInitialPosition("0");
+        }
       } else {
         gsap.fromTo(
           wrapperRef.current,
@@ -59,7 +63,7 @@ export default function StartMenu({ isHidden, setIsHidden }: StartMenuProps) {
   return (
     <div
       ref={wrapperRef}
-      className="absolute max-h-full max-w-full h-full w-[600px] sm:h-[800px] p-2 left-0 sm:pl-0 pb-[4.5rem] sm:pb-16 bottom-0 pointer-events-none"
+      className="absolute max-h-full max-w-full h-full w-[600px] sm:h-[800px] p-2 left-0 sm:pl-0 pb-[4.5rem] sm:pb-16 bottom-0 pointer-events-none translate-x-[-1000px]"
     >
       <div
         className={
