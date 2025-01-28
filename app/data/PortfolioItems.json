@@ -2,14 +2,14 @@
   "portfolioItems": [
     {
       "title": "malavika.org",
-      "description": "A professional portfolio website made for my cousin.",
+      "description": "Portfolio website for a client.",
       "icon": "/malavika.svg",
       "tags": ["React", "TypeScript", "Vite"],
       "link": "https://www.malavika.org"
     },
     {
       "title": "Satyaloka",
-      "description": "My personal blog.",
+      "description": "Personal blog.",
       "icon": "/images/icons/satyaloka.svg",
       "tags": ["AstroJS", "TypeScript"],
       "link": "https://satyaloka.org"
